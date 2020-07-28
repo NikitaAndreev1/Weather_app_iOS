@@ -15,14 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jyu-8y-WS9">
-                            <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <segue destination="Eaq-Bg-Xfn" kind="show" id="Vgt-Kn-kO9"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCitiesCell" textLabel="OO2-iL-mrW" style="IBUITableViewCellStyleDefault" id="X46-WU-H9l">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -50,7 +42,13 @@
                             <outlet property="delegate" destination="6E3-iG-9aT" id="z0P-Sc-daz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="rCK-1s-IzJ"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="rCK-1s-IzJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XFm-bX-vYu">
+                            <connections>
+                                <segue destination="Eaq-Bg-Xfn" kind="presentation" identifier="" id="jHW-a2-fVJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ng-CB-wDH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +110,7 @@
             <objects>
                 <tableViewController id="Eaq-Bg-Xfn" customClass="AllCitiesController" customModule="Weather_app_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P0F-hT-XD9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -137,6 +135,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityLabel" destination="MSP-Ub-JaV" id="3p0-af-wLD"/>
+                                    <segue destination="jQ5-nx-qd3" kind="unwind" identifier="addCity" unwindAction="addCityWithSegue:" id="e5V-ZK-OEL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -148,6 +147,7 @@
                     <navigationItem key="navigationItem" id="iVl-XV-S1V"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQe-ny-zsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jQ5-nx-qd3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1003" y="-615"/>
         </scene>
