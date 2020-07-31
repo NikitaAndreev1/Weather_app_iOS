@@ -34,18 +34,34 @@ class MyCitiesViewController: UITableViewController {
         return cell
     }
  
-  @IBAction func addCity(segue: UIStoryboardSegue) {
-    if segue​.​identifier ​==​ ​"addCity" {
-//            let allCitiesController ​=​ segue​.​source as​!​ ​AllCitiesController
-//            if let indexPath​ = allCitiesController​.​tableView​.​indexPathForSelectedRow {
-//                let city ​=​ allCitiesController​.​cities​[​indexPath​.​row]
-//                cities​.​append​(​city)
-//                tableView​.​reloadData​()
-//
-//            }
+    @IBAction func addCity(segue: UIStoryboardSegue) {
         
+        if segue.identifier == "addCity" {
+            
+            let allCitiesController = segue.source as! AllCitiesController
+            
+            if let indexPath = allCitiesController.tableView.indexPathForSelectedRow {
+                
+                let city = allCitiesController.cities[indexPath.row]
+                if !cities.contains(city) {
+                cities.append(city)
+                tableView.reloadData()
+            }
+            }
+  }
     }
-    }
-
-
+        override func tableView(
+            _ tableView: UITableView,
+            commit editingStyle: UITableViewCell.EditingStyle,
+            forRowAt indexPath: IndexPath) {
+            
+            if editingStyle == .delete {
+                cities.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade) }
+            }
+        
+        
+        
 }
+
+

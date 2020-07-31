@@ -69,10 +69,10 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Cco-24-jw6">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fsq-pa-dmi">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="o8U-PH-7wc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ss9-0o-6H3">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
@@ -135,7 +135,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cityLabel" destination="MSP-Ub-JaV" id="3p0-af-wLD"/>
-                                    <segue destination="jQ5-nx-qd3" kind="unwind" identifier="addCity" unwindAction="addCityWithSegue:" id="e5V-ZK-OEL"/>
+                                    <segue destination="zd7-1y-4Hd" kind="unwind" identifier="addCity" unwindAction="addCityWithSegue:" id="I2x-WM-5j1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -147,7 +147,7 @@
                     <navigationItem key="navigationItem" id="iVl-XV-S1V"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQe-ny-zsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="jQ5-nx-qd3" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="zd7-1y-4Hd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1003" y="-615"/>
         </scene>
