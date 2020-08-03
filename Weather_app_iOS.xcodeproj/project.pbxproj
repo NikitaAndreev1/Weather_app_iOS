@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2038A62E24D7D69C00419828 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2038A62D24D7D69C00419828 /* WeatherViewController.swift */; };
+		2038A63024D7D6D600419828 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2038A62F24D7D6D600419828 /* WeatherCell.swift */; };
 		20DB2B2E24CE9FAD005F7568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB2B2D24CE9FAD005F7568 /* AppDelegate.swift */; };
 		20DB2B3024CE9FAD005F7568 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB2B2F24CE9FAD005F7568 /* SceneDelegate.swift */; };
 		20DB2B3224CE9FAD005F7568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB2B3124CE9FAD005F7568 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2038A62D24D7D69C00419828 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		2038A62F24D7D6D600419828 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		20DB2B2A24CE9FAD005F7568 /* Weather_app_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather_app_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DB2B2D24CE9FAD005F7568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DB2B2F24CE9FAD005F7568 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +73,9 @@
 				20DB2B4324CEA133005F7568 /* AllCitiesCell.swift */,
 				20DB2B4124CEA08A005F7568 /* AllCitiesController.swift */,
 				20DB2B3324CE9FAD005F7568 /* Main.storyboard */,
+				2038A62F24D7D6D600419828 /* WeatherCell.swift */,
 				20DB2B3624CE9FB2005F7568 /* Assets.xcassets */,
+				2038A62D24D7D69C00419828 /* WeatherViewController.swift */,
 				20DB2B3824CE9FB2005F7568 /* LaunchScreen.storyboard */,
 				20DB2B3B24CE9FB2005F7568 /* Info.plist */,
 			);
@@ -151,6 +157,8 @@
 				20DB2B2E24CE9FAD005F7568 /* AppDelegate.swift in Sources */,
 				20DB2B4224CEA08A005F7568 /* AllCitiesController.swift in Sources */,
 				20DB2B4624CEABEA005F7568 /* MyCitiesViewController.swift in Sources */,
+				2038A63024D7D6D600419828 /* WeatherCell.swift in Sources */,
+				2038A62E24D7D69C00419828 /* WeatherViewController.swift in Sources */,
 				20DB2B4424CEA133005F7568 /* AllCitiesCell.swift in Sources */,
 				20DB2B3024CE9FAD005F7568 /* SceneDelegate.swift in Sources */,
 			);

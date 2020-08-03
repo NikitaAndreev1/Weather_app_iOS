@@ -54,28 +54,64 @@
             </objects>
             <point key="canvasLocation" x="1003" y="133"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="UKr-xS-a6S">
             <objects>
-                <collectionViewController id="YAJ-nj-Lau" sceneMemberID="viewController">
+                <collectionViewController id="YAJ-nj-Lau" customClass="WeatherViewController" customModule="Weather_app_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LR7-Bt-tGj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m33-FE-Fm5">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m33-FE-Fm5">
+                            <size key="itemSize" width="150" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fsq-pa-dmi">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="WeatherCell" id="fsq-pa-dmi" customClass="WeatherCell" customModule="Weather_app_iOS" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ss9-0o-6H3">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjI-vQ-MBc">
+                                            <rect key="frame" x="5" y="0.0" width="140" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEY-A5-cY7">
+                                            <rect key="frame" x="5" y="129" width="140" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ifG-9I-uP7">
+                                            <rect key="frame" x="25" y="24.5" width="100" height="100.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="D7G-n3-O4E"/>
+                                                <constraint firstAttribute="height" constant="100" id="Zjc-mf-4gj"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SjI-vQ-MBc" firstAttribute="top" secondItem="Ss9-0o-6H3" secondAttribute="top" id="2mm-XU-0H7"/>
+                                        <constraint firstItem="SjI-vQ-MBc" firstAttribute="leading" secondItem="Ss9-0o-6H3" secondAttribute="leading" constant="5" id="MCH-5l-UUc"/>
+                                        <constraint firstAttribute="trailing" secondItem="wEY-A5-cY7" secondAttribute="trailing" constant="5" id="Slg-ux-5yM"/>
+                                        <constraint firstItem="wEY-A5-cY7" firstAttribute="leading" secondItem="Ss9-0o-6H3" secondAttribute="leading" constant="5" id="bys-Um-jyQ"/>
+                                        <constraint firstItem="ifG-9I-uP7" firstAttribute="centerX" secondItem="Ss9-0o-6H3" secondAttribute="centerX" id="ckt-8Q-4hH"/>
+                                        <constraint firstAttribute="trailing" secondItem="SjI-vQ-MBc" secondAttribute="trailing" constant="5" id="gS7-Cm-FOd"/>
+                                        <constraint firstAttribute="bottom" secondItem="wEY-A5-cY7" secondAttribute="bottom" id="ieP-Pe-snV"/>
+                                        <constraint firstItem="ifG-9I-uP7" firstAttribute="centerY" secondItem="Ss9-0o-6H3" secondAttribute="centerY" id="u5c-Df-oyb"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="ifG-9I-uP7" id="FtA-nm-R9T"/>
+                                    <outlet property="time" destination="wEY-A5-cY7" id="RzQ-XR-p3C"/>
+                                    <outlet property="weather" destination="SjI-vQ-MBc" id="vlk-eV-Ir7"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -87,7 +123,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6D-I9-xUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="133"/>
+            <point key="canvasLocation" x="1924.6376811594205" y="132.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CrD-Wg-GUR">
@@ -152,4 +188,7 @@
             <point key="canvasLocation" x="1003" y="-615"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+    </resources>
 </document>
