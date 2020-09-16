@@ -21,7 +21,7 @@ class AllCitiesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
+
     }
 
     // MARK: - Table view data source
@@ -34,7 +34,7 @@ class AllCitiesController: UITableViewController {
         return cities.count
     }
 
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllCitiesCell", for: indexPath) as! AllCitiesCell
         cell.cityLabel.text = cities[indexPath.row]
